@@ -1,0 +1,16 @@
+	Selenium Environment
+	=============================
+	Selenium : is web automation api(application programign interface)
+
+	Install JDK
+	Install Eclipse		
+	Install Chrome WebDriver
+		https://chromedriver.storage.googleapis.com/index.html?path=84.0.4147.30/
+	Get Selenium API
+		https://www.selenium.dev/downloads/
+		
+		
+			
+
+	
+	
