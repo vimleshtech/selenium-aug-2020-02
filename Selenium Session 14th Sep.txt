@@ -1,0 +1,49 @@
+How to handle Popup/alertbox?
+	driver.switchTo().alert().getText();
+	driver.switchTo().alert().accept()
+	or
+	driver.switchTo().alert().disMiss()
+	
+Iframe:
+	webpage inside webpage		
+	
+	WebElement frame =  driver.findElement(By.id("iframeResult"));		
+	driver.switchTo().frame(frame);					
+
+How to handle multiple windows?
+
+	Set<String> wins = driver.getWindowHandlers();
+	for(String win : wins)
+	{
+		....
+		driver.switchTo.window(win());
+		...		..
+
+	} 
+
+Timeout: 
+	Implicit: set the max time and code will be continue when element will match other will wait for max given time	
+		driver.manage().timeouts().implictlyWait(time,TimeUnit.Seconds);		
+	
+	setScriptTimeOut: wait till the script is not executed  within given time interval 
+		driver.manage().timeouts().setScriptTimeOut(time,TimeUnit.Seconds)
+
+	pageLoadTimeOut
+		Webdriver driver =new ChromeDriver();
+		driver.manage().timeOuts().pageLoadTimeout(time,TimeUnit.secords);
+		driver.get("url")
+
+	Explicit: set the max time and code will wait till given time 		
+		Thread.sleep(time);
+
+	FluentWait
+		Wait wait =new FluentWait(driver)
+			.withTimeOut(30,SECONDS)
+			.polliingEvery(5,SECONDS)
+			.ignoreing(Exception.class);
+		
+		
+
+			
+	
+
